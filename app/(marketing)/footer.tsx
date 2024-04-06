@@ -1,5 +1,4 @@
-import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
-import { BiLogoLinkedin } from "react-icons/bi";
+
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
@@ -23,16 +22,16 @@ const Footer = () => {
             <p className=" text-gray-400 pb-4 mt-2">Socials</p>
             <ul>
               <li className="inline-flex items-center gap-2">
-                <BiLogoLinkedin /> LinkedIn
+                 LinkedIn
               </li>
               <br />
               <li className="inline-flex items-center gap-2">
-                <AiOutlineTwitter />
+                
                 Twitter
               </li>
               <br />
               <li className="inline-flex items-center gap-2">
-                <AiFillInstagram />
+                
                 Instagram
               </li>
             </ul>
