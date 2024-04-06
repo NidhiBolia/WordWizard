@@ -1,4 +1,4 @@
-
+/* eslint react/no-unescaped-entities */
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
@@ -31,7 +31,6 @@ const Footer = () => {
               </li>
               <br />
               <li className="inline-flex items-center gap-2">
-                
                 Instagram
               </li>
             </ul>

@@ -15,7 +15,7 @@ export default function Learn() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {Boxes.map((box) => (
         
-      <div className="fex flex-col text-gray-600 bg-gray-50 rounded-lg">
+      <div key={box.id}className="fex flex-col text-gray-600 bg-gray-50 rounded-lg">
             <div className="py-3 px-3 flex items-center justify-between border-2 border-gray-500 rounded-t-lg 
             text-gray-700 font-bold">
             <div className="flex space-x-1.5">
