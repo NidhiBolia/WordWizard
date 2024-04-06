@@ -17,23 +17,23 @@ To run the platform locally on your machine, follow these steps:
 
 bash
 Copy code
-git clone https://github.com/NidhiBolia/WordWizard.git
+git clone https://github.com/NidhiBolia/WordWizard.git <br>
 
 
 2.Install Dependencies:
 Navigate to the project directory and install the required dependencies using:
 
-Copy code
+Copy code<br>
 npm install
 
 
 3.Start the Server:
 Run the following command to start the server:
-npm run start
+npm run start<br>
 
 
 4.Access the Platform:
-Once the server is running, open your web browser and navigate to http://localhost:3000 to access the platform.
+Once the server is running, open your web browser and navigate to http://localhost:3000 to access the platform.<br>
 
 5.Create an Account:
 Sign up for a new account or log in with existing credentials to start learning and exploring the platform.
