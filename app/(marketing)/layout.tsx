@@ -7,14 +7,10 @@ type Props={
     children:React.ReactNode;
 }
 
-const MarketingLayout=({children}:Props)=>{
+const MarketingLayout=()=>{
     return(
-        // <div className="min-h-screen flex flex-col">
         <div>
         <Header/>
-        {/* <main className="flex-1 flex flex-col items-center justify-center">
-           {children}
-        </main> */}
         <Page/>
         <About/>
         <Learn/>

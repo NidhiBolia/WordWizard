@@ -2,10 +2,10 @@ type Props={
     children: React.ReactNode;
 };
 
-const MainLayout=({children}:Props)=>{
+const MainLayout=()=>{
     return(
         <div>
-        {children}
+        Main
         </div>
     )
 }
