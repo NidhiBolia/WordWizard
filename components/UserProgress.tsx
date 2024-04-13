@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import { courses } from "@/database/schema";
 import {Button} from "@/components/ui/button";
 import { InfinityIcon } from "lucide-react";
 type Props = {
-    activeCourse: {imageSrc:string;title:string;};
+    activeCourse: typeof courses.$inferSelect;
     hearts:number;
     points:number;
     hasActiveCourse:boolean;
@@ -15,7 +16,7 @@ export default function UserProgress({activeCourse,points,hearts,hasActiveCourse
       <Link href="/courses">
         <Button variant="sidebar">
             <Image src={activeCourse.imageSrc} alt={activeCourse.title}
-            className="rounded-md border" width={32} height={32} />
+            className="rounded-md border" width={35} height={35} />
         </Button>
       </Link>
       <Link href='/shop'>
