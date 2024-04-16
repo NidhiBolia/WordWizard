@@ -40,9 +40,9 @@ Sign up for a new account or log in with existing credentials to start learning 
 
 ## Contributing
 We welcome contributions from the community to enhance and improve the platform. If you'd like to contribute, please follow these steps:
-1.Fork the repository.
-2.Create a new branch for your feature or bug fix.
-3.Make your changes and ensure they adhere to our coding standards.
-4.Test your changes thoroughly.
-5.Commit your changes and push them to your fork.
-6.Submit a pull request detailing the changes you've made and the problem they solve.
+1.Fork the repository.<br>
+2.Create a new branch for your feature or bug fix.<br>
+3.Make your changes and ensure they adhere to our coding standards.<br>
+4.Test your changes thoroughly.<br>
+5.Commit your changes and push them to your fork.<br>
+6.Submit a pull request detailing the changes you've made and the problem they solve.<br>
