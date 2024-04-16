@@ -2,38 +2,52 @@ import { StickyWrapper } from "@/components/StickyWrapper";
 import { FeedWrapper } from "@/components/FeedWrapper";
 import { Header } from "./header";
 import UserProgress from "@/components/UserProgress";
-import { getUserProgress,getUnits } from "@/database/queries";
+import { getUserProgress, getUnits, getCourseProgress, getLessonPercentage } from "@/database/queries";
 import { redirect } from "next/navigation";
+import { Unit } from "./unit";
+import { lessons } from "@/database/schema";
+const LearnPage = async () => {
+  
+ 
+        const userProgressData = getUserProgress();
+        const courseProgressData = getCourseProgress();
+        const lessonPercentageData = getLessonPercentage();
+        const unitsData = getUnits();
 
-const LearnPage=async()=>{
-    const userProgress= await getUserProgress();
-    const unitsData=await getUnits();
-
-
-    if(!userProgress || !userProgress.activeCourse){
-        redirect("/courses");
-    }   
-    return(
-        <div className="flex flex-row-reverse gap-[48px] px-6">
-        <StickyWrapper >
-            <UserProgress 
-            activeCourse={userProgress.activeCourse} 
-            hearts={userProgress.hearts} 
-            points={userProgress.points} 
-            hasActiveCourse={false}/>
-        </StickyWrapper>
-        <FeedWrapper>
-        <Header title={userProgress.activeCourse.title}/>
-        {unitsData.map((unit)=>(
-            <div key={unit.id}>
-                <h2 className="text-2xl font-semibold text-gray-800">{unit.title}</h2>
-                <p className="text-gray-600">{unit.description}</p>
+        const [userProgress, courseProgress, lessonPercentage, units] = await Promise.all([userProgressData, courseProgressData, lessonPercentageData, unitsData]);
+        if (!userProgress || !userProgress.activeCourse) {
+            redirect("/courses");
+        }
+        if (!courseProgress) {
+            redirect("/courses");
+        }
+        return (
+            <div className="flex flex-row-reverse gap-[48px] px-6">
+                <StickyWrapper>
+                    <UserProgress
+                        activeCourse={userProgress.activeCourse}
+                        hearts={userProgress.hearts}
+                        points={userProgress.points}
+                        hasActiveCourse={false}
+                    />
+                </StickyWrapper>
+                <FeedWrapper>
+                    <Header title={userProgress.activeCourse.title} />
+                    {units.map((unit) => (
+                        <div key={unit.id} className="mb-10">
+                            <Unit
+                                id={unit.id}
+                                order={unit.order}
+                                description={unit.description}
+                                title={unit.title}
+                                lessons={unit.lessons}
+                                activeLessons={courseProgress.activeLesson}
+                                activeLessonsPercentage={lessonPercentage}
+                            />
+                        </div>
+                    ))}
+                </FeedWrapper>
             </div>
-        ))}
-        </FeedWrapper>
-        </div>
-    )
-}
-export default LearnPage
-
-// 
+        );
+    } 
+export default LearnPage;

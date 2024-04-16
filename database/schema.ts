@@ -27,6 +27,7 @@ export const lessons=pgTable("lessons",{
     title:text("title").notNull(),
     unitId:integer("unit_id").references(()=>units.id,{onDelete:"cascade"}).notNull(),
     order:integer("order").notNull(),
+    
 })
 
 export const lessonsRelation=relations(lessons,({one,many})=>({
@@ -96,7 +97,7 @@ export const userProgress = pgTable("user_progress", {
     activeCourseId:integer("active_course_id").references(()=>courses.id,{onDelete:"cascade"}),hearts:integer("hearts").notNull().default(5),
     points:integer("points").notNull().default(0),
 });
-
+    
 export const userProgressRelation=relations(userProgress,({one})=>({
     activeCourse:one(courses,{
         fields:[userProgress.activeCourseId],
