@@ -21,7 +21,7 @@ export default function UserProgress({activeCourse,points,hearts,hasActiveCourse
       </Link>
       <Link href='/shop'>
         <Button variant="sidebar" className="text-orange-500  ">
-            <Image src="/Points.png" alt="points" className="mr-2" width={18} height={18} />
+            <Image src="/points.png" alt="points" className="mr-2" width={18} height={18} />
             {points}
         </Button>
       </Link>
