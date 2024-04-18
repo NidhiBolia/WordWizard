@@ -41,7 +41,7 @@ const QuestPage = async () => {
                     hasActiveCourse={false}
                 />
             </StickyWrapper>
-            <FeedWrapper > {/* Add flex-grow class */}
+            <FeedWrapper >
                 <div className="w-full flex flex-col items-center">
                     <Image src="/quest.png" alt="Quest" height={40} width={40} />
                     <h1 className="text-center font-bold text-neutral-800 text-2xl my-6">

@@ -34,8 +34,8 @@ export const ExitModel = () => {
             Don't Go
           </DialogTitle>
           <DialogDescription className="text-center text-base">
-            You are about to leave the lesson. Are you sure you want to leave?
-          </DialogDescription>
+          You are about to leave the lesson. Are you sure you want to leave?
+        </DialogDescription>
         </DialogHeader>
         <DialogFooter className="mb-4">
           <div className="flex  flex-col gap-y-4 w-full">
