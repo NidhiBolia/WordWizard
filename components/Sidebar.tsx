@@ -20,7 +20,7 @@ export const Sidebar = ({ className }: Props) => {
       "flex h-full lg:w-[256px] lg:fixed left-0 top-0 px-4 border-r-2 flex-col",
       className,
     )}>
-        <Link href='/learn'>
+        <Link href='/courses'>
       <div className="pt-8 pl-4 pb-7 flex items-center ">
           <Image src="/wordWizard.png" className="mr-5" height={32} width={32}  alt="wordWizard"/>
           <h1 className="text-2xl font-extrabold text-sky-500 tracking-wide">

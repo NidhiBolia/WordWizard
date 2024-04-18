@@ -123,7 +123,7 @@ export const getCourseProgress = cache(async () => {
 });
 
 
-const getLesson=cache(async(id?:number)=>{
+export const getLesson=cache(async(id?:number)=>{
     const {userId}=await auth();
     if(!userId){
         return null;
@@ -170,4 +170,22 @@ export const getLessonPercentage=cache(async()=>{
     const percentage=Math.round((completedChallenges.length/lesson.challenges.length)*100
 );
     return percentage;
+})
+
+export const getTopTenUsers=cache(async()=>{
+    const {userId}=await auth();
+    if(!userId){
+        return null;
+    }
+    const data=await db.query.userProgress.findMany({
+        orderBy:(userProgress,{desc})=>[desc(userProgress.points)],
+        limit:10,
+        columns:{
+            userId:true,
+            userName:true,
+            userImageSrc:true,
+            points:true,
+        }
+    })
+    return data;
 })
