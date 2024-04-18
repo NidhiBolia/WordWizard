@@ -1,4 +1,4 @@
- /* eslint react/no-unescaped-entities */
+
 "use client";
 import Image from "next/image";
 
@@ -32,7 +32,7 @@ export const ExitModel = () => {
             <Image src="/sad.png" height={100} width={100} alt="sad" />
           </div>
           <DialogTitle className="text-center fonr-bold text-2xl">
-            Don't Go
+            Do not Go
           </DialogTitle>
           <DialogDescription className="text-center text-base">
           You are about to leave the lesson. Are you sure you want to leave?

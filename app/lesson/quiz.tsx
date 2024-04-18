@@ -1,4 +1,3 @@
- /* eslint react/no-unescaped-entities */
 "use client";
 import Image from "next/image";
 import { Footer } from "./footer";
@@ -131,7 +130,7 @@ export const Quiz = ({
                 <Image src="/finish.png" alt="Finish" className="hidden lg:block "height={50} width={50}/>
                 <Image src="/finish.png" alt="Finish" className="block lg:hidden "height={40} width={40}/>
                 <h1 className="text-xl lg:text-3xl font-bold text-neutral-700">
-                    Great Job!<br /> You've completed the lesson
+                    Great Job!<br /> You have completed the lesson
                 </h1>
                 <div className="flex items-center gap-x-4 w-full">
                     <ResultCard variant="points" value={challenges.length*10}/>
